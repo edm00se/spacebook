@@ -26,8 +26,8 @@ jobs:
       - name: Build 11ty Site
         run: |
           npm ci
-          npm run build:postcss
           npm run build:11ty -- --pathprefix=/spacebook/
+          npm run build:postcss
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
   deploy:

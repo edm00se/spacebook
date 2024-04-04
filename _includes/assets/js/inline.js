@@ -5,11 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-function logout() {
-  localStorage.removeItem("passphrase")
-  window.location.href = "/";
-}
-
 function showNavigation() {
   const navigation = document.getElementById("navigation");
   navigation.classList.remove("hidden", "sticky","pt-32");
