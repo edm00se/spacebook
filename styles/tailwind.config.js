@@ -6,13 +6,9 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: {
-    enabled: true,
-    content: ["_site/**/*.html"],
-    options: {
-      safelist: [],
-    },
-  },
+  content: [
+    "_site/**/*.html"
+  ],
   darkMode: 'class',
   theme: {
     container: {

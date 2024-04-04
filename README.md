@@ -1,6 +1,15 @@
-# Spacebook
+# edm00se/spacebook
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/68791233-b2d6-4a86-8c42-e654e112a157/deploy-status)](https://app.netlify.com/sites/spacebook-app/deploys)
+This is a fork of [broeker/spacebook](https://github.com/broeker/spacebook). This fork has been updated to be usable by me and updates and migrates to the latest version of:
+
+- node LTS (20)
+- 11ty
+- tailwind
+- postcss
+
+It also removes netlify and forestry specifics and adds deployment via GitHub Pages from a GitHub Action. Its license is MIT, keeping with the source repo.
+
+---
 
 Create your own spacebook and customize it to your needs. Spacebooks are speedy to set up, free, and 100% open source. Spacebooks are modern notebooks you can use to create documentation, sketch out new ideas, build a simple website, or whatever suits your fancy. 
 
@@ -11,7 +20,7 @@ Create your own spacebook and customize it to your needs. Spacebooks are speedy 
 </p>
 
 <p align="center">
-<strong>https://spacebook.app</strong> <br />
+<strong>https://edm00se.codes/spacebook/</strong> <br />
 </>
 
 <p align="center">
