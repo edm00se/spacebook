@@ -51,11 +51,6 @@ module.exports = function(eleventyConfig) {
     return '<img class="icon" src="'+url+'" alt="'+title+'" />';
   });
 
-  // Button shortcode -- experimental
-  // eleventyConfig.addLiquidShortcode("button", function(title,url) {
-  //   return '<a class="button" href="'+url+'">'+title+'</a>';
-  // });
-
 
   // Tailwind pass through and watch target
   eleventyConfig.addWatchTarget("./_tmp/style.css");
