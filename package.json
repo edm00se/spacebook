@@ -6,7 +6,9 @@
     "start": "run-p start:eleventy start:postcss",
     "start:eleventy": "eleventy --serve",
     "start:postcss": "postcss styles/tailwind.css --o _tmp/style.css --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o _site/style.css &&  ./node_modules/.bin/cleancss -o _site/style.css _site/style.css",
+    "build": "run-s build:postcss build:11ty",
+    "build:postcss": "NODE_ENV=production postcss styles/tailwind.css --o _site/style.css &&  ./node_modules/.bin/cleancss -o _site/style.css _site/style.css",
+    "build:11ty": "ELEVENTY_PRODUCTION=true eleventy",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
   },
