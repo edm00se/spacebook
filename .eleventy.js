@@ -27,7 +27,7 @@ module.exports = function(eleventyConfig) {
       widths: [400, 600, 800, 1000, 1200, 1400, 1600, 1900],
       formats: ['webp', 'jpeg', 'png'],
       urlPath: "/content/images/",
-      outputDir: "./_site/images/"
+      outputDir: "./_site/content/images/"
     });
 
     let lowsrc = metadata.jpeg[0];
@@ -64,54 +64,14 @@ module.exports = function(eleventyConfig) {
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // Configuration API: use eleventyConfig.addLayoutAlias(from, to) to add
-  // layout aliases! Say you have a bunch of existing content using
-  // layout: post. If you don’t want to rewrite all of those values, just map
-  // post to a new file like this:
-  // eleventyConfig.addLayoutAlias("post", "layouts/my_new_post_layout.njk");
-
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
-
-  // Add support for maintenance-free post authors
-  // Adds an authors collection using the author key in our post frontmatter
-  // Thanks to @pdehaan: https://github.com/pdehaan
-  // eleventyConfig.addCollection("authors", collection => {
-  //   const blogs = collection.getFilteredByGlob("posts/*.md");
-  //   return blogs.reduce((coll, post) => {
-  //     const author = post.data.author;
-  //     if (!author) {
-  //       return coll;
-  //     }
-  //     if (!coll.hasOwnProperty(author)) {
-  //       coll[author] = [];
-  //     }
-  //     coll[author].push(post.data);
-  //     return coll;
-  //   }, {});
-  // });
 
    // Creates custom collection "pages"
    eleventyConfig.addCollection("pages", function(collection) {
     return collection.getFilteredByGlob("pages/*.md");
    });
-
-   // Creates custom collection "posts"
-  //  eleventyConfig.addCollection("posts", function(collection) {
-  //   const coll = collection.getFilteredByGlob("posts/*.md");
-  
-  //   for(let i = 0; i < coll.length ; i++) {
-  //     const prevPost = coll[i-1];
-  //     const nextPost = coll[i + 1];
-  
-  //     coll[i].data["prevPost"] = prevPost;
-  //     coll[i].data["nextPost"] = nextPost;
-  //   }
-  
-  //   return coll;
-  // });
-    
 
    // Creates custom collection "results" for search
    const searchFilter = require("./filters/searchFilter");
