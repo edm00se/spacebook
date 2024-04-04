@@ -9,7 +9,7 @@ eleventyNavigation:
 ---
 You have successfully launched your spacebook. If you are new here, you may want to [read the docs](https://spacebook.app/) for tips and tricks on setting up your project.
 
-![Hello, world](../images/hello.jpg)
+![Hello, world](./images/hello.jpg)
 
 ->*Onward...*<-
 
