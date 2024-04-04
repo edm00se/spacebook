@@ -11,7 +11,7 @@
   "enableSearch": false,
   "enableDarkMode": true,
   "enableEditButton": false,
-  "enableDatestamp": true,
+  "enableDatestamp": false,
   "enableGithubLink": false,
   "enableContact": false,
   "enableNetlifyCMS": false,
